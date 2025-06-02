@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Game</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main>
+    <!-- Start Screen -->
+    <div class="screen start-screen active" id="start-screen">
+      <h1 class="header start-header" id="start-header">Welcome to Quiz Game</h1>
+      <p class="para start-para" id="start-para">
+        This quiz game is designed to enhance your knowledge. If you consider yourself a master, take the quiz and prove it!
+      </p>
+      <button class="button start-button" id="start-button" type="button">Start Quiz</button>
+    </div>
+
+    <!-- Quiz Screen -->
+    <div class="screen quiz-screen" id="quiz-screen">
+      <div class="quiz-question-info">
+        <h2 class="quiz-question" id="quiz-question">Question goes here</h2>
+        <div class="quiz-question-count">
+          <p>Question <span id="question-number">1</span> of <span id="total-question-count">5</span></p>
+          <p>Score: <span id="score">0</span></p>
+        </div>
+      </div>
+      <div class="quiz-options">
+        <button class="option" id="option-1" type="button"></button>
+        <button class="option" id="option-2" type="button"></button>
+        <button class="option" id="option-3" type="button"></button>
+        <button class="option" id="option-4" type="button"></button>
+      </div>
+      <div class="progress">
+        <div class="progress-bar" id="progress-bar"></div>
+      </div>
+    </div>
+
+    <!-- Result Screen -->
+    <div class="screen result-screen" id="result-screen">
+      <h1 class="header result-header" id="result-header">Quiz Results</h1>
+      <div class="result-info">
+        <p class="final-score">You scored <span id="final-score">0</span> out of <span id="total-final-count">5</span></p>
+      </div>
+      <p id="result-message">Well done! 🎉</p>
+      <button class="button restart-button" id="restart-button" type="button">Restart Quiz</button>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
