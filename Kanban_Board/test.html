@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Drag and Drop Example</title>
+  <style>
+    #draggable {
+      width: 100px;
+      height: 100px;
+      background-color: skyblue;
+      margin: 20px;
+      cursor: grab;
+    }
+
+    #dropzone {
+      width: 300px;
+      height: 200px;
+      border: 2px dashed gray;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="draggable" draggable="true">Drag me</div>
+
+  <div id="dropzone">Drop here</div>
+
+  <script>
+    const draggable = document.getElementById("draggable");
+    const dropzone = document.getElementById("dropzone");
+
+    // 1. dragstart – when dragging starts
+    draggable.addEventListener("dragstart", (e) => {
+      e.dataTransfer.setData("text", "dragged"); // setting data to be transferred
+      console.log("Drag started");
+    });
+
+    // 2. dragover – when something is dragged over a dropzone
+    dropzone.addEventListener("dragover", (e) => {
+      e.preventDefault(); // must prevent default to allow dropping
+      console.log("Dragging over dropzone");
+    });
+
+    // 3. drop – when the item is dropped
+    dropzone.addEventListener("drop", (e) => {
+      e.preventDefault();
+      console.log("Dropped!");
+      dropzone.appendChild(draggable); // move the box into the dropzone
+    });
+
+    // Optional: dragenter and dragleave
+    dropzone.addEventListener("dragenter", () => {
+      console.log("Entered dropzone");
+      dropzone.style.backgroundColor = "#e0ffe0";
+    });
+
+    dropzone.addEventListener("dragleave", () => {
+      console.log("Left dropzone");
+      dropzone.style.backgroundColor = "transparent";
+    });
+  </script>
+
+</body>
+</html>
