@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expenese Tracker</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="container">
+        <h1>Expense Tracker</h1>
+        <div id="balance-container">
+            <h2>Your Balance</h2>
+            <h1 id="balance">$0.0</h1>
+
+            <div class="summary">
+                <div class="part income-part">
+                    <h2>Income</h2>
+                    <div class="income" id="income">$0.0</div>
+                </div>
+                <div class="part expense-part">
+                    <h2>Expense</h2>
+                    <div class="expense" id="expense">$0.0</div>
+                </div>
+            </div>
+        </div>
+         <div id="main-content">
+                <div id="transactions-container">
+                    <h2>Transactions</h2>
+                    <div class="all-transactions">
+                        <p>Please Add the transaction.</p>
+                    </div>
+                </div>
+                 <div id="form-container">
+                    <h2>Add Transaction</h2>
+                    <div class="transaction-form">
+                        <label for="desc">Description</label>
+                        <textarea name="desc" id="description"></textarea>
+
+                        <label for="amount">Amount</label>
+                        <input type="number" name="amount" id="amount">
+                        <p>use (-) for the expense</p>
+
+                        <button class="btn add-transaction-btn" id="add-transaction-btn">Add Transaction</button>
+                    </div>
+                 </div>
+            </div>
+    </div>
+  </body>
+  <script src="./script.js"></script>
+</html>
