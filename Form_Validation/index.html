@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="form-container">
+    <h2>Register</h2>
+    <form>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required class=""/>
+        <div class="message name-message hidden" id="name-message"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required class=""/>
+         <div class="message email-message hidden" id="email-message"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter password" required class=""/>
+         <div class="message pass-message hidden" id="pass-message"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" id="confirm-password" placeholder="Confirm password" required class=""/>
+         <div class="message copass-message hidden" id="copass-message"></div>
+      </div>
+
+      <button type="submit" class="submit-btn">Register</button>
+    </form>
+  </div>
+</body>
+<script src="./script.js"></script>
+</html>
