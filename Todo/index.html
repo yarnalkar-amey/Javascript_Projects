@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Todo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="container">
+    <div id="header">
+      <h1 class="title">My Tasks</h1>
+      <p>
+        <span id="day">Monday</span>, <span id="month">May</span>
+        <span id="date">5</span>
+      </p>
+    </div>
+    <div id="main">
+      <div class="add-task">
+        <input type="text" id="task-desc" placeholder="Add new task..."/>
+        <button id="add-btn" class="add-btn">+</button>
+      </div>
+      <div id="view-task">
+        <div id="options">
+          <h2 class="option all active" id="all">All</h2>
+          <h2 class="option opn-active" id="active">Active</h2>
+          <h2 class="option completed" id="completed">Completed</h2>
+        </div>
+        <div id="display">
+          <ul>
+            <li class="task">
+              <input type="checkbox" name="status" />
+              <p class="desc">Get the protein bar</p>
+              <span class="delete">✕</span>
+            </li>
+            <li class="task">
+              <input type="checkbox" name="status" />
+              <p class="desc">Go to deep sleep</p>
+              <span class="delete">✕</span>
+            </li>
+            <li class="task">
+              <input type="checkbox" name="status" />
+              <p class="desc">Get well soon</p>
+              <span class="delete">✕</span>
+            </li>
+            <li class="task">
+              <input type="checkbox" name="status" />
+              <p class="desc">Do it Again</p>
+              <span class="delete">✕</span>
+            </li>
+          </ul>
+        </div>
+        <div id="summary">
+          <p class="task-left">2 left</p>
+          <button class="clear-btn" id="clear-btn">Clear Completed</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="./script.js"></script>
+</html>
